@@ -39,12 +39,14 @@ def save():
     review = request.json.get('')
     sentiment = request.json.get('')
 
-    # creating a final variable seperated by commas
+    # creating a final variable separated by commas
     data_entry = date + "," + product + "," + review + "," + sentiment
 
     # open the file in the 'append' mode
+    f = open('/home/rounak/programming/whitehatjr/python/webdev_using_python/Product Review Part -2/static/assets/datafiles/updated_product_dataset.csv' , 'a')
 
     # Log the data in the file
+    f.write(data_entry + '\n')
 
     # return a success message
     return jsonify({'status' : 'success' , 
