@@ -1,0 +1,6 @@
+flask
+autopep8
+python-dotenv
+pandas
+numpy
+tensorflow
